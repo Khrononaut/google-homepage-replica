@@ -5,20 +5,28 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+    font-family: sans-serif;
+}
+
 header {
 
 }
+
+/* NAV */
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: dashed;
 }
 
 nav a {
-    margin: 5px;
+    font-size: calc( 5px + 0.5em);
+    margin: 10px;
     text-decoration: none;
+    color: black;
 }
 
 nav a:hover {
@@ -38,20 +46,28 @@ nav img:hover {
 }
 
 nav button {
-    margin: 5px;
     background-color: #1a73e8;
     color: white;
-    width: 120px;
+    min-width: 100px;
+    width: calc(75px + 5vw);
     height: 40px;
-    border-radius: 7px;
+    border-radius: 5px;
     border: none;
     font-size: 1em;
+}
+
+#nav-half-1 {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 #nav-half-2 {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin: 0 10px 0 30px;
 }
 
 /* MAIN */
@@ -61,7 +77,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 70vh;
 }
 
 #google-img {
@@ -73,8 +89,9 @@ main {
     display: flex;
     align-items: stretch;
     justify-content: center;
-    width: 50vw;
-    border: solid 3px gray;
+    max-width: 700px;
+    width: 90vw;
+    border: solid 1px #e5e6e9;
     border-radius: 50px;
     padding: 10px;
 }
@@ -98,8 +115,8 @@ main {
     flex-direction: row;
     justify-content: space-around;
     margin: 3vh;
-    width: 400px;
-    height: 50px;
+    width: 300px;
+    height: 40px;
 }
 
 #search-buttons > button {
@@ -107,9 +124,58 @@ main {
     border-radius: 5%;
     font-size: medium;
     padding: 5px;
-    background-color: white;
+    background-color: #f8f9fa;
+    font-size: calc( 5px + 0.4em);
+    border: none;
 }
 
 #search-buttons > button:hover {
-    background-color: whitesmoke;
+    border: solid 1px whitesmoke;
+    box-shadow: grey 0px 0.5px 3.5px;
+}
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    font-size: calc( 5px + 0.5em);
+}
+
+#country-entry {
+    padding: 15px;
+    border-bottom: 0.5px solid grey;
+}
+
+#carbon-entry {
+    padding-top: 10px;
+}
+
+#footer-flex-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer-flex-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+}
+
+#footer-flex-2 span {
+    padding: 5px 20px;
+}
+
+.footer-flex-3 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
 }
